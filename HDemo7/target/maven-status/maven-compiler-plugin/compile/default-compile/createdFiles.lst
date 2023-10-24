@@ -1,0 +1,5 @@
+com/mycompany/hdemo7/util/HibernateUtil.class
+com/mycompany/hdemo7/entity/Hijo.class
+com/mycompany/hdemo7/HDemo7.class
+com/mycompany/hdemo7/entity/Padre.class
+com/mycompany/hdemo7/dao/PadreDao.class
