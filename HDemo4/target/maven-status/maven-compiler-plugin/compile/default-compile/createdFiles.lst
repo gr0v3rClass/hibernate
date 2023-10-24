@@ -1,0 +1,5 @@
+com/mycompany/hdemo4/entity/InstructorDetail.class
+com/mycompany/hdemo4/dao/InstructorDao.class
+com/mycompany/hdemo4/util/HibernateUtil.class
+com/mycompany/hdemo4/entity/Instructor.class
+com/mycompany/hdemo4/HDemo4.class

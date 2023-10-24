@@ -1,0 +1,5 @@
+com/mycompany/hdemo2/entity/Usuarios.class
+com/mycompany/hdemo2/dao/UsuariosDao.class
+com/mycompany/hdemo2/entity/Usuarios_.class
+com/mycompany/hdemo2/HDemo2.class
+com/mycompany/hdemo2/util/HibernateUtil.class

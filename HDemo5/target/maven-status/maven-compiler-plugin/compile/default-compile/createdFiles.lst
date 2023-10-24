@@ -1,0 +1,7 @@
+com/mycompany/hdemo5/dao/InstructorDao.class
+com/mycompany/hdemo5/util/HibernateUtil.class
+com/mycompany/hdemo5/entity/Cursos.class
+com/mycompany/hdemo5/entity/InstructorDetail.class
+com/mycompany/hdemo5/entity/Instructor.class
+com/mycompany/hdemo5/HDemo5.class
+com/mycompany/hdemo5/dao/CursosDao.class

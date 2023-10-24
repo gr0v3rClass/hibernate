@@ -1,0 +1,4 @@
+com/mycompany/hdemo6/util/HibernateUtil.class
+com/mycompany/hdemo6/entity/Estudiante.class
+com/mycompany/hdemo6/dao/EstudianteDao.class
+com/mycompany/hdemo6/HDemo6.class
