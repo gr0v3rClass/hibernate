@@ -4,6 +4,11 @@
 
 package com.mycompany.hdemo8;
 
+import com.mycompany.hdemo8.dao.CursoDao;
+import com.mycompany.hdemo8.dao.EstudianteDao;
+import com.mycompany.hdemo8.entity.Curso;
+import com.mycompany.hdemo8.entity.Estudiante;
+
 /**
  *
  * @author gr0v3r
@@ -11,6 +16,14 @@ package com.mycompany.hdemo8;
 public class HDemo8 {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Estudiante estudiante = new Estudiante("ana");
+        Curso curso = new Curso("matematicas");
+        CursoDao cursoDao = new CursoDao();
+        cursoDao.saveCurso(curso);
+        estudiante.getCursos().add(curso);
+        EstudianteDao estudianteDao = new EstudianteDao();
+        estudianteDao.saveEstudiante(estudiante);
+        
     }
 }

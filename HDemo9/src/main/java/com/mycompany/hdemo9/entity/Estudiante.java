@@ -2,16 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.hdemo8.entity;
+package com.mycompany.hdemo9.entity;
 
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
@@ -19,33 +16,32 @@ import javax.persistence.Table;
  * @author gr0v3r
  */
 @Entity
-@Table(name = "curso")
-public class Curso {
+@Table(name = "estudiante")
+public class Estudiante {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_curso")
-    private int idCurso;
-    
+    @Column(name = "id")
+    private int id;
     @Column(name = "nombre")
     private String nombre;
-    
-    @ManyToMany(mappedBy = "cursos")
-    private Set<Estudiante> estudiantes = new HashSet<>();
+    @Column(name = "telefono")
+    private int telefono;
 
-    public Curso() {
+    public Estudiante() {
     }
 
-    public Curso(String nombre) {
+    public Estudiante(String nombre, int telefono) {
         this.nombre = nombre;
+        this.telefono = telefono;
     }
 
-    public int getIdCurso() {
-        return idCurso;
+    public int getId() {
+        return id;
     }
 
-    public void setIdCurso(int idCurso) {
-        this.idCurso = idCurso;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -56,17 +52,17 @@ public class Curso {
         this.nombre = nombre;
     }
 
-    public Set<Estudiante> getEstudiantes() {
-        return estudiantes;
+    public int getTelefono() {
+        return telefono;
     }
 
-    public void setEstudiantes(Set<Estudiante> estudiantes) {
-        this.estudiantes = estudiantes;
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
     }
 
     @Override
     public String toString() {
-        return "Curso{" + "idCurso=" + idCurso + ", nombre=" + nombre + ", estudiantes=" + estudiantes + '}';
+        return "Estudiante{" + "id=" + id + ", nombre=" + nombre + ", telefono=" + telefono + '}';
     }
     
     

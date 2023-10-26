@@ -4,6 +4,7 @@
  */
 package com.mycompany.hdemo8.entity;
 
+import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,7 +21,7 @@ import javax.persistence.Table;
  * @author gr0v3r
  */
 @Entity
-@Table(name = "estudicnate")
+@Table(name = "estudiante")
 public class Estudiante {
     
     @Id
@@ -37,5 +38,43 @@ public class Estudiante {
            joinColumns = @JoinColumn(name = "id_estudiante"),
            inverseJoinColumns = @JoinColumn(name = "id_curso")
     )
-    private Set<Curso> cursos; 
+    private Set<Curso> cursos = new HashSet<>(); 
+
+    public Estudiante() {
+    }
+
+    public Estudiante(String nomnre) {
+        this.nomnre = nomnre;
+    }
+
+    public int getIdEstudiante() {
+        return idEstudiante;
+    }
+
+    public void setIdEstudiante(int idEstudiante) {
+        this.idEstudiante = idEstudiante;
+    }
+
+    public String getNomnre() {
+        return nomnre;
+    }
+
+    public void setNomnre(String nomnre) {
+        this.nomnre = nomnre;
+    }
+
+    public Set<Curso> getCursos() {
+        return cursos;
+    }
+
+    public void setCursos(Set<Curso> cursos) {
+        this.cursos = cursos;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" + "idEstudiante=" + idEstudiante + ", nomnre=" + nomnre + ", cursos=" + cursos + '}';
+    }
+    
+    
 }
